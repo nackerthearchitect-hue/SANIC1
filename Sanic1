@@ -1,0 +1,5 @@
+local remote = game:GetService("Players").LocalPlayer.Character:WaitForChild("SonicRemote")
+
+	for i = 1, 1000 do
+		remote:FireServer("CollectRing", "Ring")
+	end)
