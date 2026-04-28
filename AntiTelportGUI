@@ -70,6 +70,9 @@ G2L["7"]["Size"] = UDim2.new(0, 98, 0, 38);
 G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["7"]["Text"] = [[ENABLE]];
 G2L["7"]["Position"] = UDim2.new(0.20833, 0, 0.24774, 0);
+G2L["7"]["MouseButton1Down"]:Connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/nackerthearchitect-hue/SANIC1/refs/heads/main/AntiTeleport'))()
+end)
 
 
 -- StarterGui.ATGUI.Frame1.TextButton.UICorner
