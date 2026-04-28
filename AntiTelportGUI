@@ -10,12 +10,15 @@
 -- Instances: 18 | Scripts: 4 | Modules: 0 | Tags: 0
 local G2L = {};
 
--- StarterGui.ScreenGui
+-- StarterGui.ATGUI
 G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[ATGUI]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 G2L["1"]["ResetOnSpawn"] = false
 
--- StarterGui.ScreenGui.Frame1
+
+
+-- StarterGui.ATGUI.Frame1
 G2L["2"] = Instance.new("Frame", G2L["1"]);
 G2L["2"]["BorderSizePixel"] = 0;
 G2L["2"]["BackgroundColor3"] = Color3.fromRGB(148, 148, 148);
@@ -23,9 +26,9 @@ G2L["2"]["Size"] = UDim2.new(0, 168, 0, 226);
 G2L["2"]["Position"] = UDim2.new(0.64537, 14, 0.28299, 71);
 G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["2"]["Name"] = [[Frame1]];
-G2L["Active"] = true
+G2L["2"]["Active"] = true
 
--- StarterGui.ScreenGui.Frame1.TextLabel
+-- StarterGui.ATGUI.Frame1.TextLabel
 G2L["3"] = Instance.new("TextLabel", G2L["2"]);
 G2L["3"]["TextWrapped"] = true;
 G2L["3"]["BorderSizePixel"] = 0;
@@ -39,22 +42,22 @@ G2L["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["3"]["Text"] = [[ANTI-TELEPORT]];
 
 
--- StarterGui.ScreenGui.Frame1.TextLabel.UICorner
+-- StarterGui.ATGUI.Frame1.TextLabel.UICorner
 G2L["4"] = Instance.new("UICorner", G2L["3"]);
 
 
 
--- StarterGui.ScreenGui.Frame1.UICorner
+-- StarterGui.ATGUI.Frame1.UICorner
 G2L["5"] = Instance.new("UICorner", G2L["2"]);
 
 
 
--- StarterGui.ScreenGui.Frame1.UIDragDetector
+-- StarterGui.ATGUI.Frame1.UIDragDetector
 G2L["6"] = Instance.new("UIDragDetector", G2L["2"]);
 G2L["6"]["DragUDim2"] = UDim2.new(0, -11, 0, 0);
 
 
--- StarterGui.ScreenGui.Frame1.TextButton
+-- StarterGui.ATGUI.Frame1.TextButton
 G2L["7"] = Instance.new("TextButton", G2L["2"]);
 G2L["7"]["TextWrapped"] = true;
 G2L["7"]["BorderSizePixel"] = 0;
@@ -69,17 +72,17 @@ G2L["7"]["Text"] = [[ENABLE]];
 G2L["7"]["Position"] = UDim2.new(0.20833, 0, 0.24774, 0);
 
 
--- StarterGui.ScreenGui.Frame1.TextButton.UICorner
+-- StarterGui.ATGUI.Frame1.TextButton.UICorner
 G2L["8"] = Instance.new("UICorner", G2L["7"]);
 
 
 
--- StarterGui.ScreenGui.Frame1.TextButton.LocalScript
+-- StarterGui.ATGUI.Frame1.TextButton.LocalScript
 G2L["9"] = Instance.new("LocalScript", G2L["7"]);
 
 
 
--- StarterGui.ScreenGui.Frame1.TextButton
+-- StarterGui.ATGUI.Frame1.TextButton
 G2L["a"] = Instance.new("TextButton", G2L["2"]);
 G2L["a"]["TextWrapped"] = true;
 G2L["a"]["BorderSizePixel"] = 0;
@@ -94,17 +97,17 @@ G2L["a"]["Text"] = [[DISABLE]];
 G2L["a"]["Position"] = UDim2.new(0.20833, 0, 0.45356, 0);
 
 
--- StarterGui.ScreenGui.Frame1.TextButton.UICorner
+-- StarterGui.ATGUI.Frame1.TextButton.UICorner
 G2L["b"] = Instance.new("UICorner", G2L["a"]);
 
 
 
--- StarterGui.ScreenGui.Frame1.TextButton.LocalScript
+-- StarterGui.ATGUI.Frame1.TextButton.LocalScript
 G2L["c"] = Instance.new("LocalScript", G2L["a"]);
 
 
 
--- StarterGui.ScreenGui.Frame1.CloseButton
+-- StarterGui.ATGUI.Frame1.CloseButton
 G2L["d"] = Instance.new("TextButton", G2L["2"]);
 G2L["d"]["BorderSizePixel"] = 0;
 G2L["d"]["TextSize"] = 14;
@@ -118,12 +121,12 @@ G2L["d"]["Name"] = [[CloseButton]];
 G2L["d"]["Position"] = UDim2.new(0.84165, 0, 0.8656, 0);
 
 
--- StarterGui.ScreenGui.Frame1.CloseButton.UICorner
+-- StarterGui.ATGUI.Frame1.CloseButton.UICorner
 G2L["e"] = Instance.new("UICorner", G2L["d"]);
 
 
 
--- StarterGui.ScreenGui.Frame1.TextButton
+-- StarterGui.ATGUI.Frame1.TextButton
 G2L["f"] = Instance.new("TextButton", G2L["2"]);
 G2L["f"]["TextWrapped"] = true;
 G2L["f"]["BorderSizePixel"] = 0;
@@ -138,22 +141,22 @@ G2L["f"]["Text"] = [[TP (teleport where you died)]];
 G2L["f"]["Position"] = UDim2.new(0.20833, 0, 0.65034, 0);
 
 
--- StarterGui.ScreenGui.Frame1.TextButton.UICorner
+-- StarterGui.ATGUI.Frame1.TextButton.UICorner
 G2L["10"] = Instance.new("UICorner", G2L["f"]);
 
 
 
--- StarterGui.ScreenGui.Frame1.TextButton.LocalScript
+-- StarterGui.ATGUI.Frame1.TextButton.LocalScript
 G2L["11"] = Instance.new("LocalScript", G2L["f"]);
 
 
 
--- StarterGui.ScreenGui.LocalScript
+-- StarterGui.ATGUI.LocalScript
 G2L["12"] = Instance.new("LocalScript", G2L["1"]);
 
 
 
--- StarterGui.ScreenGui.Frame1.TextButton.LocalScript
+-- StarterGui.ATGUI.Frame1.TextButton.LocalScript
 local function C_9()
 local script = G2L["9"];
 	local players = game:GetService('Players')
@@ -179,7 +182,7 @@ local script = G2L["9"];
 	start()
 end;
 task.spawn(C_9);
--- StarterGui.ScreenGui.Frame1.TextButton.LocalScript
+-- StarterGui.ATGUI.Frame1.TextButton.LocalScript
 local function C_c()
 local script = G2L["c"];
 	local Players = game:GetService("Players")
@@ -218,7 +221,7 @@ local script = G2L["c"];
 	end)
 end;
 task.spawn(C_c);
--- StarterGui.ScreenGui.Frame1.TextButton.LocalScript
+-- StarterGui.ATGUI.Frame1.TextButton.LocalScript
 local function C_11()
 local script = G2L["11"];
 	local Players = game:GetService("Players")
@@ -268,7 +271,7 @@ local script = G2L["11"];
 	end)
 end;
 task.spawn(C_11);
--- StarterGui.ScreenGui.LocalScript
+-- StarterGui.ATGUI.LocalScript
 local function C_12()
 local script = G2L["12"];
 	local Frame = script.Parent.Frame1
