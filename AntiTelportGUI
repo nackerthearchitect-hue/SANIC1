@@ -13,7 +13,7 @@ local G2L = {};
 -- StarterGui.ScreenGui
 G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
-
+G2L["1"]["ResetOnSpawn"] = false
 
 -- StarterGui.ScreenGui.Frame1
 G2L["2"] = Instance.new("Frame", G2L["1"]);
@@ -23,7 +23,7 @@ G2L["2"]["Size"] = UDim2.new(0, 168, 0, 226);
 G2L["2"]["Position"] = UDim2.new(0.64537, 14, 0.28299, 71);
 G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["2"]["Name"] = [[Frame1]];
-
+G2L["Active"] = true
 
 -- StarterGui.ScreenGui.Frame1.TextLabel
 G2L["3"] = Instance.new("TextLabel", G2L["2"]);
