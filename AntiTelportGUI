@@ -1,0 +1,283 @@
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+]=]
+
+-- Instances: 18 | Scripts: 4 | Modules: 0 | Tags: 0
+local G2L = {};
+
+-- StarterGui.ScreenGui
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+
+-- StarterGui.ScreenGui.Frame1
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(148, 148, 148);
+G2L["2"]["Size"] = UDim2.new(0, 168, 0, 226);
+G2L["2"]["Position"] = UDim2.new(0.64537, 14, 0.28299, 71);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Name"] = [[Frame1]];
+
+
+-- StarterGui.ScreenGui.Frame1.TextLabel
+G2L["3"] = Instance.new("TextLabel", G2L["2"]);
+G2L["3"]["TextWrapped"] = true;
+G2L["3"]["BorderSizePixel"] = 0;
+G2L["3"]["TextSize"] = 14;
+G2L["3"]["TextScaled"] = true;
+G2L["3"]["BackgroundColor3"] = Color3.fromRGB(183, 183, 183);
+G2L["3"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3"]["Size"] = UDim2.new(0, 168, 0, 50);
+G2L["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3"]["Text"] = [[ANTI-TELEPORT]];
+
+
+-- StarterGui.ScreenGui.Frame1.TextLabel.UICorner
+G2L["4"] = Instance.new("UICorner", G2L["3"]);
+
+
+
+-- StarterGui.ScreenGui.Frame1.UICorner
+G2L["5"] = Instance.new("UICorner", G2L["2"]);
+
+
+
+-- StarterGui.ScreenGui.Frame1.UIDragDetector
+G2L["6"] = Instance.new("UIDragDetector", G2L["2"]);
+G2L["6"]["DragUDim2"] = UDim2.new(0, -11, 0, 0);
+
+
+-- StarterGui.ScreenGui.Frame1.TextButton
+G2L["7"] = Instance.new("TextButton", G2L["2"]);
+G2L["7"]["TextWrapped"] = true;
+G2L["7"]["BorderSizePixel"] = 0;
+G2L["7"]["TextSize"] = 14;
+G2L["7"]["TextScaled"] = true;
+G2L["7"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(173, 173, 173);
+G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7"]["Size"] = UDim2.new(0, 98, 0, 38);
+G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7"]["Text"] = [[ENABLE]];
+G2L["7"]["Position"] = UDim2.new(0.20833, 0, 0.24774, 0);
+
+
+-- StarterGui.ScreenGui.Frame1.TextButton.UICorner
+G2L["8"] = Instance.new("UICorner", G2L["7"]);
+
+
+
+-- StarterGui.ScreenGui.Frame1.TextButton.LocalScript
+G2L["9"] = Instance.new("LocalScript", G2L["7"]);
+
+
+
+-- StarterGui.ScreenGui.Frame1.TextButton
+G2L["a"] = Instance.new("TextButton", G2L["2"]);
+G2L["a"]["TextWrapped"] = true;
+G2L["a"]["BorderSizePixel"] = 0;
+G2L["a"]["TextSize"] = 14;
+G2L["a"]["TextScaled"] = true;
+G2L["a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a"]["BackgroundColor3"] = Color3.fromRGB(173, 173, 173);
+G2L["a"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["a"]["Size"] = UDim2.new(0, 98, 0, 38);
+G2L["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a"]["Text"] = [[DISABLE]];
+G2L["a"]["Position"] = UDim2.new(0.20833, 0, 0.45356, 0);
+
+
+-- StarterGui.ScreenGui.Frame1.TextButton.UICorner
+G2L["b"] = Instance.new("UICorner", G2L["a"]);
+
+
+
+-- StarterGui.ScreenGui.Frame1.TextButton.LocalScript
+G2L["c"] = Instance.new("LocalScript", G2L["a"]);
+
+
+
+-- StarterGui.ScreenGui.Frame1.CloseButton
+G2L["d"] = Instance.new("TextButton", G2L["2"]);
+G2L["d"]["BorderSizePixel"] = 0;
+G2L["d"]["TextSize"] = 14;
+G2L["d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d"]["BackgroundColor3"] = Color3.fromRGB(174, 174, 174);
+G2L["d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["d"]["Size"] = UDim2.new(0, 26, 0, 30);
+G2L["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d"]["Text"] = [[X]];
+G2L["d"]["Name"] = [[CloseButton]];
+G2L["d"]["Position"] = UDim2.new(0.84165, 0, 0.8656, 0);
+
+
+-- StarterGui.ScreenGui.Frame1.CloseButton.UICorner
+G2L["e"] = Instance.new("UICorner", G2L["d"]);
+
+
+
+-- StarterGui.ScreenGui.Frame1.TextButton
+G2L["f"] = Instance.new("TextButton", G2L["2"]);
+G2L["f"]["TextWrapped"] = true;
+G2L["f"]["BorderSizePixel"] = 0;
+G2L["f"]["TextSize"] = 14;
+G2L["f"]["TextScaled"] = true;
+G2L["f"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["f"]["BackgroundColor3"] = Color3.fromRGB(173, 173, 173);
+G2L["f"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["f"]["Size"] = UDim2.new(0, 98, 0, 38);
+G2L["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["f"]["Text"] = [[TP (teleport where you died)]];
+G2L["f"]["Position"] = UDim2.new(0.20833, 0, 0.65034, 0);
+
+
+-- StarterGui.ScreenGui.Frame1.TextButton.UICorner
+G2L["10"] = Instance.new("UICorner", G2L["f"]);
+
+
+
+-- StarterGui.ScreenGui.Frame1.TextButton.LocalScript
+G2L["11"] = Instance.new("LocalScript", G2L["f"]);
+
+
+
+-- StarterGui.ScreenGui.LocalScript
+G2L["12"] = Instance.new("LocalScript", G2L["1"]);
+
+
+
+-- StarterGui.ScreenGui.Frame1.TextButton.LocalScript
+local function C_9()
+local script = G2L["9"];
+	local players = game:GetService('Players')
+	local lplr = players.LocalPlayer
+	local lastCF, stop, heartbeatConnection
+	local function start()
+		heartbeatConnection = game:GetService('RunService').Heartbeat:Connect(function()
+			if stop then
+				return 
+			end 
+			lastCF = lplr.Character:FindFirstChildOfClass('Humanoid').RootPart.CFrame
+		end)
+		lplr.Character:FindFirstChildOfClass('Humanoid').RootPart:GetPropertyChangedSignal('CFrame'):Connect(function()
+			stop = true
+			lplr.Character:FindFirstChildOfClass('Humanoid').RootPart.CFrame = lastCF
+			game:GetService('RunService').Heartbeat:Wait()
+			stop = false
+		end)    
+		lplr.Character:FindFirstChildOfClass('Humanoid').Died:Connect(function()
+			heartbeatConnection:Disconnect()
+		end)
+	end
+	start()
+end;
+task.spawn(C_9);
+-- StarterGui.ScreenGui.Frame1.TextButton.LocalScript
+local function C_c()
+local script = G2L["c"];
+	local Players = game:GetService("Players")
+	
+	local player = Players.LocalPlayer
+	
+	local savedPosition = nil
+	
+	-- teleport after respawn
+	local function onCharacterAdded(character)
+		local root = character:WaitForChild("HumanoidRootPart")
+	
+		if savedPosition then
+			task.wait(0.2) -- small delay so character fully loads
+			root.CFrame = CFrame.new(savedPosition)
+		end
+	end
+	
+	player.CharacterAdded:Connect(onCharacterAdded)
+	
+	-- 🔘 BUTTON CLICK
+	script.Parent.MouseButton1Click:Connect(function()
+		local char = player.Character
+		if not char then return end
+	
+		local humanoid = char:FindFirstChildOfClass("Humanoid")
+		local root = char:FindFirstChild("HumanoidRootPart")
+	
+		if humanoid and root then
+			-- save position BEFORE dying
+			savedPosition = root.Position
+	
+			-- kill character
+			humanoid.Health = 0
+		end
+	end)
+end;
+task.spawn(C_c);
+-- StarterGui.ScreenGui.Frame1.TextButton.LocalScript
+local function C_11()
+local script = G2L["11"];
+	local Players = game:GetService("Players")
+	
+	local player = Players.LocalPlayer
+	local cam = workspace.CurrentCamera
+	
+	local lastDeathPosition = nil
+	
+	-- track death position
+	local function setupCharacter(character)
+		local humanoid = character:WaitForChild("Humanoid")
+		local root = character:WaitForChild("HumanoidRootPart")
+	
+		humanoid.Died:Connect(function()
+			lastDeathPosition = root.Position
+		end)
+	end
+	
+	player.CharacterAdded:Connect(setupCharacter)
+	
+	if player.Character then
+		setupCharacter(player.Character)
+	end
+	
+	-- teleport function
+	local function teleportWithoutCameraSnap(position)
+		if not position then return end
+	
+		local savedCFrame = cam.CFrame
+		cam.CameraType = Enum.CameraType.Scriptable
+		cam.CFrame = savedCFrame
+	
+		local char = player.Character
+		if char and char:FindFirstChild("HumanoidRootPart") then
+			char.HumanoidRootPart.CFrame = CFrame.new(position)
+		end
+	
+		task.wait(0.05)
+		cam.CFrame = savedCFrame
+		cam.CameraType = Enum.CameraType.Custom
+	end
+	
+	-- 🔘 BUTTON CLICK
+	script.Parent.MouseButton1Click:Connect(function()
+		teleportWithoutCameraSnap(lastDeathPosition)
+	end)
+end;
+task.spawn(C_11);
+-- StarterGui.ScreenGui.LocalScript
+local function C_12()
+local script = G2L["12"];
+	local Frame = script.Parent.Frame1
+	local Button = script.Parent.Frame1.CloseButton
+	
+	Button.MouseButton1Click:Connect(function()
+		Frame.Visible = not Frame.Visible
+	end)
+end;
+task.spawn(C_12);
+
+return G2L["1"], require;
