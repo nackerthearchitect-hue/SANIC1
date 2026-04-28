@@ -14,8 +14,6 @@ local G2L = {};
 G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
 G2L["1"]["Name"] = [[ATGUI]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
-G2L["1"]["ResetOnSpawn"] = false
-
 
 
 -- StarterGui.ATGUI.Frame1
@@ -26,7 +24,7 @@ G2L["2"]["Size"] = UDim2.new(0, 168, 0, 226);
 G2L["2"]["Position"] = UDim2.new(0.64537, 14, 0.28299, 71);
 G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["2"]["Name"] = [[Frame1]];
-G2L["2"]["Active"] = true
+
 
 -- StarterGui.ATGUI.Frame1.TextLabel
 G2L["3"] = Instance.new("TextLabel", G2L["2"]);
@@ -157,29 +155,39 @@ G2L["12"] = Instance.new("LocalScript", G2L["1"]);
 
 
 -- StarterGui.ATGUI.Frame1.TextButton.LocalScript
-local function C_7()
-local script = G2L["7"];
+local function C_9()
+local script = G2L["9"];
 	local players = game:GetService('Players')
 	local lplr = players.LocalPlayer
+	
+	local button = script.Parent
+	
 	local lastCF, stop, heartbeatConnection
+	
 	local function start()
 		heartbeatConnection = game:GetService('RunService').Heartbeat:Connect(function()
-			if stop then
-				return 
-			end 
+			if stop then return end
 			lastCF = lplr.Character:FindFirstChildOfClass('Humanoid').RootPart.CFrame
 		end)
+	
 		lplr.Character:FindFirstChildOfClass('Humanoid').RootPart:GetPropertyChangedSignal('CFrame'):Connect(function()
 			stop = true
 			lplr.Character:FindFirstChildOfClass('Humanoid').RootPart.CFrame = lastCF
 			game:GetService('RunService').Heartbeat:Wait()
 			stop = false
-		end)    
+		end)
+	
 		lplr.Character:FindFirstChildOfClass('Humanoid').Died:Connect(function()
 			heartbeatConnection:Disconnect()
 		end)
 	end
-	start()
+	
+	local enabled = false
+	
+	button.MouseButton1Click:Connect(function()
+		enabled = true
+		start()
+	end)
 end;
 task.spawn(C_9);
 -- StarterGui.ATGUI.Frame1.TextButton.LocalScript
